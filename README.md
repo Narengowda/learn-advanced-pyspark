@@ -1,4 +1,21 @@
-This is a PySpark app to process recipe data as directed in the task.txt
+This pyspark app does these transformation
+
+### Pipeline
+- Uses the dataset : https://s3-eu-west-1.amazonaws.com/dwh-test-resources/recipes.json
+- Creates a table and make the output data ready to be queried after and during each execution using **Impala**, without any manual steps.
+- It sends an alert if some Task failed, for instance: Send an email, a Slack message or anything else that makes error discovery and error handling easier.
+- The executor rusn the whole pipeline or an individual Task by specifying it on the command line as an argument.
+
+### Transformation
+
+From the dataset It extracts all the of the recipes that have "*beef*" as one of the ingredients. Then, it adds a new field (named `difficulty`) calculates the difficulty of the recipe based on:
+
+- **Hard** if the total of `prepTime` and `cookTime` is greater than 1 hour.
+- **Medium** if the total is between 30 minutes and 1 hour.
+- **Easy** if the total is less than 30 minutes.
+- **Unknown** otherwise.
+
+All of the data is stored in Parquet format
 
 ## Installation Steps
 1. Install and setup spark, yarn, HDFS, hive and Impala.
