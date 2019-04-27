@@ -27,7 +27,7 @@ class Notify(Logger):
     """Class to handle notifications, for now only email is added"""
 
     def __init__(self, owner):
-        self.sender = "hello@fresh.com"
+        self.sender = "tech@dummies.com"
         self.owner = owner
 
     def notify(self, to, message):
