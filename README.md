@@ -74,7 +74,7 @@ http://archive.cloudera.com/cdh4/cdh/4/oozie/CoordinatorFunctionalSpec.html#a1._
 Entry point of the app, which parses the arguments of the commandline application
     python app.py will show usage info
 
-	(helloenv) nlakshma@blr-lpa6q:~/test/test/test/Narengowda-data-engineering-test-v2/recipes-etl$ python app.py --help
+	(helloenv) naren@ubuntu:~/test/test/test/Narengowda-data-engineering/recipes-etl$ python app.py --help
 	[nltk_data] Downloading package punkt to /home/nlakshma/nltk_data...
 	[nltk_data]   Package punkt is already up-to-date!
 	usage: app.py [-h] [--tasks EXEC_TASKS] [--email EMAIL] [--master MASTER]
